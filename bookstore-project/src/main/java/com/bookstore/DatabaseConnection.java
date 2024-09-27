@@ -16,6 +16,9 @@ public class DatabaseConnection {
     private static Statement statement; 
     private static ResultSet resultSet;
     private static PreparedStatement preparedStatement;
+    public Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
 
     public static void main(String[] args) {
         try {
